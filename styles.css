@@ -1,0 +1,249 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #bc9b51;
+    border-color: #bc9b51;
+}
+
+.btn-secondary:hover {
+    color: #bc9b51;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("images/biscottino_bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    padding: 120px 20px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero-logo-img {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+    position: relative;
+    z-index: 10;
+}
+
+.hero-logo-img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.15));
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23d7e6f1" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23d7e6f1" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23d7e6f1" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="%23d7e6f1" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="%23d7e6f1" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #bc9b51;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-buttons .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.3rem !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px 60px;
+    }
+    
+    .hero-logo-img {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-logo-img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+    }
+    
+    .contact-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* Smooth scrolling enhancement */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Loading animation for images */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Focus styles for accessibility */
+.btn:focus {
+    outline: 2px solid #bc9b51;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .btn-secondary {
+        background: #fff;
+        color: #000;
+        border-color: #000;
+    }
+}
