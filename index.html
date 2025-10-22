@@ -14,6 +14,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+                <div class="nav-left">
+                    <a href="#contact" class="btn btn-order">Contact</a>
+                </div>
+            <div class="nav-center">
+                <a href="#home" class="nav-logo">
+                    <img src="images/Biscottino_nav_logo.png" alt="Biscottino Logo" class="nav-logo-img">
+                </a>
+            </div>
+                <div class="nav-right">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#offerings" class="nav-link">Offerings</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -22,15 +42,420 @@
                 <img src="images/Biscottino_round_logo_blue_background_edited.png" alt="Biscottino Logo" class="hero-logo-img">
             </div>
             <div class="hero-text">
-                <h1 class="hero-title">Website Coming Soon!</h1>
-                <div class="contact-buttons">
-                    <a href="https://instagram.com/biscottinobakery" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-instagram fa-lg"></i> Visit us on Instagram
-                    </a>
+                <h1 class="hero-title">It's the little things that make life sweet</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="product-slideshow">
+        <div class="container">
+            <div class="slideshow-container">
+                <div class="slideshow-wrapper">
+                    <div class="slideshow-track" id="slideshow-track">
+                        <div class="slide-item">
+                            <img src="images/gallery/503580787_1231065551825488_212066883900205229_n.jpeg" alt="Biscottino Cookies" loading="lazy">
+                        </div>
+                        <div class="slide-item">
+                            <img src="images/gallery/510033161_1082326917103563_7388979509287518224_n.jpeg" alt="Biscottino Cookies" loading="lazy">
+                        </div>
+                        <div class="slide-item">
+                            <img src="images/gallery/510161692_1029436336036125_7044178876648456347_n.jpeg" alt="Biscottino Cookies" loading="lazy">
+                        </div>
+                        <div class="slide-item">
+                            <img src="images/gallery/514528628_1478234969833749_2360235868877884003_n.jpeg" alt="Biscottino Cookies" loading="lazy">
+                        </div>
+                        <div class="slide-item">
+                            <img src="images/gallery/515195931_10033129763389873_4157364938098337606_n.jpeg" alt="Biscottino Cookies" loading="lazy">
+                        </div>
+                        <div class="slide-item">
+                            <img src="images/gallery/520298343_9527924590642196_3667223758836240753_n.jpeg" alt="Biscottino Cookies" loading="lazy">
+                        </div>
+                        <div class="slide-item">
+                            <img src="images/gallery/529866985_733046436561094_8752007251297049793_n.jpeg" alt="Biscottino Cookies" loading="lazy">
+                        </div>
+                        <div class="slide-item">
+                            <img src="images/gallery/530415646_24636694329328167_3634917781633505426_n.jpeg" alt="Biscottino Cookies" loading="lazy">
+                        </div>
+                        <div class="slide-item">
+                            <img src="images/gallery/540269390_17880726183381532_7120247499687445294_n.jpeg" alt="Biscottino Cookies" loading="lazy">
+                        </div>
+                        <div class="slide-item">
+                            <img src="images/gallery/544284592_17881280526381532_6075158060791444937_n.jpeg" alt="Biscottino Cookies" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <button class="slideshow-btn slideshow-prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slideshow-btn slideshow-next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Biscottino</h2>
+                <p class="section-subtitle">Inspired by the Italian word for "little cookie," Biscottino creates handcrafted, bite-size cookies for all life's occasions – big or small. </p>
+            </div>
+            <div class="about-text">
+                <p>Elevate your weddings, showers, and parties with our custom assorted trays, or enjoy them in individual packages, ideal for party favors, corporate gifting, and custom branding. </p>
+                <p>At Biscottino, we believe it's the little things that make life sweet.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/Biscottino image transparent background.png" alt="Biscottino Cookies" class="about-cookie-image">
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-heart"></i>
+                    <h4>Handcrafted</h4>
+                    <p>Each cookie is carefully made with love and attention to detail</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-palette"></i>
+                    <h4>Customizable</h4>
+                    <p>Tailored to your taste and occasion with custom flavors and designs</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-gift"></i>
+                    <h4>Perfect for Gifting</h4>
+                    <p>Ideal for weddings, parties, corporate events, and special occasions</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Premium Ingredients</h4>
+                    <p>Made with the finest, freshest ingredients for exceptional taste</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Offerings Section -->
+    <section id="offerings" class="section offerings">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Offerings</h2>
+                <p class="section-subtitle">Everything you need to know about our products and services</p>
+            </div>
+            <div class="offerings-content">
+                <div class="customizable-section">
+                    <h3>Customizable Cookie Trays</h3>
+                    <div class="cookie-list-offering">
+                        Our assorted platters include our 5 signature flavours:
+                    </div>
+                    <div class="cookie-grid">
+                        <div class="cookie-type">
+                            <!-- <i class="fas fa-cookie-bite"></i> -->
+                            <span>Almond Biscotti</span>
+                        </div>
+                        <div class="cookie-type">
+                            <!-- <i class="fas fa-cookie-bite"></i> -->
+                            <span>Classic Amaretti</span>
+                        </div>
+                        <div class="cookie-type">
+                            <!-- <i class="fas fa-cookie-bite"></i> -->
+                            <span>Lemon Twists</span>
+                        </div>
+                        <div class="cookie-type">
+                            <!-- <i class="fas fa-cookie-bite"></i> -->
+                            <span>Chocolate Chip</span>
+                        </div>
+                        <div class="cookie-type">
+                            <!-- <i class="fas fa-cookie-bite"></i> -->
+                            <span>Shortbread</span>
+                        </div>
+                    </div>
+                    <div class="gift-icon">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="cookie-list-offering">
+                        Full customization is available! Contact us to discuss additional flavours and designs to match your event. 
+                    </div>
+                    <!-- <div class="gift-icon">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div> -->
+                    <div class="cookie-list-offering">Pricing for assorted platters begin at $75/kg. </div>
+                </div>
+                <div class="individual-section">
+                    <h3>Individual Gifting</h3>
+                    <div class="cookie-list-offering">
+                        Biscottino offers individual packaging ideal for guest favours and corporate gifting or branding. 
+                    </div>
+                    <div>
+                        <img src="images/individual.jpg" alt="Individual Gifting" class="individual-gifting-image">
+                    </div>
+                    <div class="cookie-list-offering">
+                        Contact us to discuss packaging styles and customization options. 
+                    </div>
+                    <div class="gift-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                </div>
+                <div class="holiday-section">
+                    <h3>Holiday Boxes</h3>
+                    <div class="cookie-list-offering">Celebrate the season with our limited-edition holiday boxes full of our festive favourites. Beautifully packaged, ready to gift, and available in two sizes, our holiday boxes add warmth and sweetness to your holidays. </div>
+                    <div class="gift-icon">
+                        <i class="fas fa-holly-berry"></i>
+                    </div>
+                    <div class="cookie-list-offering">Holiday boxes for the Christmas 2025 season are available for pick-up only in Kleinberg on December 14, December 21 and December 23. </div>
+                    <div> 
+                        <img src="images/holiday.jpg" alt="Holiday Boxes" class="holiday-boxes-image">
+                    </div>
+                </div>
+               
+               
+                <!-- <div class="pricing-section">
+                    <div class="pricing-visual">
+                        <div class="price-circle">
+                            <span class="price-number">$75</span>
+                            <span class="price-label">per kilogram</span>
+                        </div>
+                        <div class="price-info">
+                            <p>Assorted platters start at this rate</p>
+                            <p>1 kilogram ≈ 160 cookies</p>
+                        </div>
+                    </div>
+                    <div class="pricing-details">
+                        <h3>Pricing & Packages</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Custom pricing for large orders</li>
+                            <li><i class="fas fa-check-circle"></i> Volume discounts available</li>
+                            <li><i class="fas fa-check-circle"></i> Corporate event pricing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="cookies-section">
+                    <div class="cookies-visual">
+                        <h3>Our Five Signature Cookies</h3>
+                        <div class="cookie-grid">
+                            <div class="cookie-type">
+                                <i class="fas fa-cookie-bite"></i>
+                                <span>Almond Biscotti</span>
+                            </div>
+                            <div class="cookie-type">
+                                <i class="fas fa-cookie-bite"></i>
+                                <span>Classic Amaretti</span>
+                            </div>
+                            <div class="cookie-type">
+                                <i class="fas fa-cookie-bite"></i>
+                                <span>Lemon Twists</span>
+                            </div>
+                            <div class="cookie-type">
+                                <i class="fas fa-cookie-bite"></i>
+                                <span>Chocolate Chip</span>
+                            </div>
+                            <div class="cookie-type">
+                                <i class="fas fa-cookie-bite"></i>
+                                <span>Shortbread</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cookies-details">
+                        <h3>Platter Options</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Custom platters tailored to your taste</li>
+                            <li><i class="fas fa-check-circle"></i> Choose any or all signature cookies</li>
+                            <li><i class="fas fa-check-circle"></i> Custom flavors and designs available</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="delivery-section">
+                    <div class="delivery-visual">
+                        <div class="delivery-options">
+                            <div class="delivery-option">
+                                <i class="fas fa-hand-holding"></i>
+                                <h4>Free Pick-up</h4>
+                                <p>Available in Kleinburg</p>
+                            </div>
+                            <div class="delivery-option">
+                                <i class="fas fa-truck"></i>
+                                <h4>Delivery</h4>
+                                <p>Fee based on location</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-details">
+                        <h3>Packaging & Delivery</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Elegant presentation trays</li>
+                            <li><i class="fas fa-check-circle"></i> Individual party favor packages</li>
+                            <li><i class="fas fa-check-circle"></i> Custom branding options</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What’s included in a standard assorted platter?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                    <p class="cookie-list-title">A standard platter includes our five signature cookies:</p>
+                    <p>Almond Biscotti</p>
+                    <p>Classic Amaretti</p>
+                    <p>Lemon Twists</p>
+                    <p>Chocolate Chip</p>
+                    <p>Shortbread</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I customize my platter?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                    <p>Absolutely! Every tray is made to order and tailored to your taste. Choose any or all of our signature cookies, and ask us how we can customize your flavours and designs. Pricing for custom platters begins at $75/kg. </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much does a platter cost?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                    <p>An assorted platter starts at $75 per kilogram. One kilogram contains approximately 160 cookies. Let us know how many people you’d like to serve, and we’ll recommend a platter size. </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide smaller packaging options for guest favours or corporate gifting?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                    <p>Yes, we do! Contact us to discuss your preferred flavours, styles, and packaging options. </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you deliver?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                    <p>Free pick-up is available in Kleinburg. We offer delivery for an additional fee based on location. </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long can I store the cookies?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For optimal taste and freshness, store cookies in an airtight container at room temperature and consume within 3 days. For long-term storage, freeze in an airtight container for up to 3 months.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do your cookies contain allergens?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Many of our cookies contain nuts, dairy, egg and/or gluten. All cookies are made in a kitchen that handles these ingredients. While we can adjust some recipes, we can't guarantee allergen-free cookies. If you have specific allergies or dietary needs, contact us to chat about possible customizations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How far in advance should I place my order?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend placing your order at least 1 week in advance for standard platters. For custom designs or large orders, please contact us 2-3 weeks ahead of your event to ensure we can accommodate your needs.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact & How to Order</h2>
+                <p class="section-subtitle">Ready to order your custom cookie platter?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                           <p>Send Email</p>
+                            <p><a href="mailto:info@biscottino.ca">info@biscottino.ca</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <p>DM on Instagram</p>
+                            <p><a href="https://instagram.com/biscottinobakery" target="_blank">@biscottinobakery</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            
+                            <p>Kleinburg, Ontario<br>Free pick-up available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <h3>How to Order</h3>
+                    <br>    
+                    <ol class="contact-steps">
+                        <li>Contact us via email or Instagram DM</li>
+                        <li>Tell us about your event and how many people you'd like to serve</li>
+                        <li>We'll recommend the perfect platter size and discuss customization options</li>
+                        <li>Confirm your order details and delivery/pickup preferences</li>
+                        <li>Enjoy your beautiful, handcrafted cookies!</li>
+                    </ol>
+                    <!-- <div class="contact-buttons">
+                        <a href="mailto:info@biscottino.ca" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Send Email
+                        </a>
+                        <a href="https://instagram.com/biscottinobakery" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-instagram"></i> DM on Instagram
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Biscottino. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
