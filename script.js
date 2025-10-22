@@ -1,16 +1,3 @@
-// Basic button functionality for external links
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        // Add loading state for external links
-        if (this.href && (this.href.includes('mailto:') || this.href.includes('instagram'))) {
-            this.style.opacity = '0.7';
-            setTimeout(() => {
-                this.style.opacity = '1';
-            }, 2000);
-        }
-    });
-});
-
 // Logo reveal and navbar background change on scroll
 function handleLogoReveal() {
     const heroSection = document.querySelector('.hero');
@@ -47,7 +34,6 @@ function initGallery() {
     const slides = document.querySelectorAll('.slide-item');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxClose = document.getElementById('lightbox-close');
     
     if (!track || !prevBtn || !nextBtn || !slides.length) return;
     
@@ -97,13 +83,9 @@ function initGallery() {
     });
 
     // Lightbox functionality
-    const lightboxCaption = document.querySelector('.lightbox-caption');
-    const closeBtn = document.querySelector('.lightbox-close');
-    
     function openLightbox(slideIndex) {
         const img = slides[slideIndex].querySelector('img');
         lightboxImg.src = img.src;
-        lightboxCaption.textContent = img.alt;
         lightbox.style.display = 'block';
         document.body.style.overflow = 'hidden';
     }
@@ -120,16 +102,16 @@ function initGallery() {
         img.addEventListener('click', () => openLightbox(index));
     });
 
-    closeBtn.addEventListener('click', closeLightbox);
+    // Close lightbox with close button
+    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
 
-    // Close lightbox when clicking outside
+    // Close lightbox when clicking outside or pressing escape
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
             closeLightbox();
         }
     });
 
-    // Close on escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && lightbox.style.display === 'block') {
             closeLightbox();
@@ -208,6 +190,13 @@ function initMobileMenu() {
     
     if (!mobileMenuToggle || !mobileMenu) return;
     
+    // Close mobile menu function
+    const closeMobileMenu = () => {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    };
+    
     // Toggle mobile menu
     mobileMenuToggle.addEventListener('click', () => {
         mobileMenuToggle.classList.toggle('active');
@@ -223,36 +212,26 @@ function initMobileMenu() {
     
     // Close mobile menu when clicking on links
     mobileNavLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuToggle.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
+        link.addEventListener('click', closeMobileMenu);
     });
     
     // Close mobile menu when clicking outside
     mobileMenu.addEventListener('click', (e) => {
         if (e.target === mobileMenu) {
-            mobileMenuToggle.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = 'auto';
+            closeMobileMenu();
         }
     });
     
     // Close mobile menu on escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-            mobileMenuToggle.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = 'auto';
+            closeMobileMenu();
         }
     });
 }
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Biscottino website loaded successfully!');
-    
     // Add scroll listener for logo reveal
     window.addEventListener('scroll', handleLogoReveal);
     
